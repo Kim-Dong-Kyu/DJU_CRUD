@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <style type="text/css">
+    ul#leftmenu {
+      position: fixed;
+      top: 200px;
+      right: 0px;
+      z-index: 9999;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    ul#leftmenu li {
+      width: 150px;
+      margin-bottom: 2px;
+    }
+
+    ul#leftmenu li a {
+      background-color: #ccc;
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      width: 150px;
+      padding: 10px 0 10px 10px;
+      -webkit-border-bottom-left-radius: 20px;
+      -webkit-border-top-left-radius: 20px;
+      margin-left: -1px;
+      opacity: 0.6;
+    }
+
+    ul#leftmenu .dju1 a {
+      background-color: red;
+    }
+
+    ul#leftmenu .dju2 a {
+      background-color: orange;
+    }
+
+    ul#leftmenu .dju3 a {
+      background-color: yellow;
+    }
+
+    ul#leftmenu .dju4 a {
+      background-color: green;
+    }
+
+    ul#leftmenu .dju5 a {
+      background-color: blue;
+    }
+
+    ul#leftmenu .dju6 a {
+      background-color: purple;
+    }
+  </style>
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+  <ul id="leftmenu">
+    <li class="dju1"><a href="">e-나라지표</a></li>
+    <li class="dju2"><a href="">국가발전지표</a></li>
+    <li class="dju3"><a href="">국민삶의질 지표</a></li>
+    <li class="dju4"><a href="">사회지표</a></li>
+    <li class="dju5"><a href="">SDGs지표</a></li>
+    <li class="dju6"><a href="">보조지표</a></li>
+  </ul>
+  <script>
+    $(function () {
+      $('#leftmenu a').css('marginLeft', '65px');
+      $('#leftmenu > li').hover(function () {
+        $('a', $(this)).stop().animate({ 'marginLeft': '1px' }, 300);
+      },
+        function () {
+          $('a', $(this)).stop().animate({ 'marginLeft': '65px' }, 300);
+        });
+    });
+  </script>
+</body>
+
+</html>
